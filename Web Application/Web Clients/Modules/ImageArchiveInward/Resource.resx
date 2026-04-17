@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgAcceptedItem" xml:space="preserve">
+    <value>Items for Transaction No: {0} accepted</value>
+  </data>
+  <data name="msgItemDecisionLevel" xml:space="preserve">
+    <value>Decision For Item Level: Transaction {0} on Level:{1}  Decision:{2}</value>
+  </data>
+  <data name="msgItemReject" xml:space="preserve">
+    <value>Transaction No. {0} Rejected</value>
+  </data>
+  <data name="msgTransMaintData" xml:space="preserve">
+    <value>Business Date: {0}; Batch No: {1}; RL Trans No: {2}</value>
+  </data>
+  <data name="msgTransStatusChanged" xml:space="preserve">
+    <value>Transaction status changed to {0}.</value>
+  </data>
+  <data name="sqlStmrGetRLItemDetail" xml:space="preserve">
+    <value>sp_GetRLItemsForWebDecision</value>
+  </data>
+  <data name="sqlStmtCheckCompletedInUseTrans" xml:space="preserve">
+    <value>SELECT COUNT(1) FROM TBL_REJECTITEMSTATUS WITH(NOLOCK)
+where REJ_Busdate =@CurBusDate  
+and REJ_BATCHNUM = @BatchNum 
+and REJ_TRANSNUM = @TransNo 
+AND REJ_NEW_BUNDLEID = @NewBundleID 
+and REJ_STATUS IN ('I','C') and REJ_ACTIONEDBY &lt;&gt; @OperID </value>
+  </data>
+  <data name="sqlStmtCompleteTranStatus" xml:space="preserve">
+    <value>UPDATE TBL_REJECTITEMSTATUS  SET REJ_STATUS= 'C',REJ_ACTIONEDBY = @OperID, REJ_ACTIONEDTIME = GETDATE(),
+ REJ_DECISION = @RejDecision, REJ_REMARK = @Remark WHERE REJ_BUSDATE = @CurBusDate and REJ_BATCHNUM = @BatchNum 
+  AND REJ_TRANSNUM = @TransNo  AND REJ_ACTIONEDBY = @OperID AND REJ_STATUS = 'I' AND REJ_NEW_BUNDLEID = @NewBundle </value>
+  </data>
+  <data name="sqlStmtGetBranchList" xml:space="preserve">
+    <value>sp_GetPresentingBranchList</value>
+  </data>
+  <data name="sqlStmtGetDIFormatDef" xml:space="preserve">
+    <value>SELECT A.DID_Desc, B.* FROM TBL_DIFormatDef (NOLOCK) A INNER JOIN TBL_DIFormatFld (NOLOCK) B ON (A.DID_Format = B.DIF_Format) WHERE A.DID_Format = @FormatNo</value>
+  </data>
+  <data name="sqlStmtGetIISVirDirForIFSPath" xml:space="preserve">
+    <value>SELECT RTRIM(REPLACE(STR(IFS_TransportID, 2), SPACE(1), '0')) AS IFS_TransportID,  
+IFS_Site,IFS_SiteFolderName,IFS_IISVirtualPath, (IFS_IISVirtualPath+'\'+IFS_SiteFolderName) AS IFS_IISFullPath
+FROM TBL_TRANSPORT_IFSPATH (NOLOCK) WHERE IFS_TransportID = @TransportID AND IFS_Site = @Site</value>
+  </data>
+  <data name="sqlStmtGetImageArchiveInwardListing" xml:space="preserve">
+    <value>sp_GetImageArchiveInwardListing</value>
+  </data>
+  <data name="sqlstmtGetImageArchivePath" xml:space="preserve">
+    <value>sp_GetImageArchivePath</value>
+  </data>
+  <data name="sqlStmtGetInwardTotalCount" xml:space="preserve">
+    <value>sp_GetImageArchiveInwardTotalCount</value>
+  </data>
+  <data name="sqlStmtGetMaxDinNo" xml:space="preserve">
+    <value>SELECT MAX(ITM_DIN) FROM TBL_ITEM WHERE ITM_BusDate = @Busdate AND ITM_BatchNum = @BatchNum AND ITM_BatchDirectory = @BatchDir</value>
+  </data>
+  <data name="sqlStmtGetOtherStubAcctNo" xml:space="preserve">
+    <value>SELECT top 1 ITM_FLD12 FROM TBL_ITEM (NOLOCK) WHERE ITM_BusDate = @Busdate AND ITM_BatchDirectory = @BatchDir AND ITM_BatchNum = @BatchNum AND ITM_DIN &lt;&gt; @Din AND ITM_ItemType = 'S'</value>
+  </data>
+  <data name="sqlStmtGetPrintInfoForArchivalTransInward" xml:space="preserve">
+    <value>sp_GetPrintInfoForArchivalTransInward</value>
+  </data>
+  <data name="sqlStmtGetPVItemDetail" xml:space="preserve">
+    <value>sp_GetPVDIItemsForWebDecision</value>
+  </data>
+  <data name="sqlStmtGetRejectedTransactionList" xml:space="preserve">
+    <value>sp_GetRejectedTransactionForWeb</value>
+  </data>
+  <data name="sqlStmtGetResetItem" xml:space="preserve">
+    <value>SELECT COUNT(1) FROM TBL_REJECTITEMSTATUS (Nolock) 
+WHERE REJ_STATUS = 'W'
+AND REJ_BUSDATE = @Busdate
+AND REJ_BATCHNUM = @BatchNum
+AND REJ_TRANSNUM = @TransNum
+AND REJ_NEW_BUNDLEID = @NewBundleID</value>
+  </data>
+  <data name="sqlStmtGetSelectedImageArchiveInward" xml:space="preserve">
+    <value>sp_GetSelectedImageArchiveInward</value>
+  </data>
+  <data name="sqlStmtGetSelectedRejTransactionList" xml:space="preserve">
+    <value>SELECT  CASE WHEN A.REJ_REASON LIKE 'RL%' THEN 'RL' 
+		WHEN A.REJ_REASON LIKE 'DI%' THEN 'DI' 
+		WHEN A.REJ_REASON LIKE 'REJECT%' THEN 'PV' ELSE '' END AS REJ_CATEGORY, 
+		 B.ITM_BatchDirectory, A.REJ_BUSDATE, A.REJ_BATCHNUM, A.REJ_TRANSNUM, A.REJ_REJECTBY,
+A.REJ_REJECTTIME, A.REJ_SITECODE, A.REJ_REASON, A.REJ_ALLOWTOLERANCE,
+A.REJ_ALLOWBREAKDOWN, A.REJ_STATUS, B.ITM_Fld10,
+  CASE WHEN (len(rtrim(ltrim(B.ITM_ProcMode))) &gt; 1 and B.ITM_ProcMode = '02') THEN 'M'
+  WHEN (len(rtrim(ltrim(B.ITM_ProcMode))) &gt; 1 and B.ITM_ProcMode &lt;&gt; '02') THEN 'C'
+  ELSE B.ITM_ProcMode END as PROC_MODE,
+A.REJ_ACTIONEDBY, A.REJ_ACTIONEDTIME, A.REJ_DECISION, ISNULL(A.REJ_REMARK,'') AS REJ_REMARK, A.REJ_NEW_BUNDLEID ,
+B.ITM_WsID,A.REJ_1STDECISION,A.REJ_2NDDECISION,A.REJ_ROUTETOFINAL 
+ FROM TBL_REJECTITEMSTATUS A(NOLOCK)
+INNER JOIN 
+	(SELECT ITM_ProcMode, ITM_BatchDirectory, ITM_BusDate, ITM_BatchNum, ITM_TransNum, MIN(ITM_FLD10) AS ITM_FLD10,  ITM_WsID 
+	FROM TBL_ITEM WITH (NOLOCK) WHERE ITM_ItemType = 'C' 
+	GROUP BY  ITM_BusDate, ITM_BatchDirectory, ITM_BatchNum, ITM_TransNum,ITM_ProcMode,  ITM_WsID 
+	) B ON (A.REJ_BUSDATE = B.ITM_BUSDATE AND A.REJ_BATCHNUM = B.ITM_BatchNum
+	AND A.REJ_TRANSNUM = B.ITM_TransNum)  
+WHERE REJ_BUSDATE = @Busdate
+AND REJ_BATCHNUM = @BatchNo
+AND REJ_TRANSNUM = @TransNo
+AND REJ_NEW_BUNDLEID = @BundleId
+AND REJ_SITECODE = @Site</value>
+  </data>
+  <data name="sqlStmtInsNewStubItem" xml:space="preserve">
+    <value>sp_AddStubItemForWebDecision</value>
+  </data>
+  <data name="sqlStmtResetTransactionStatus" xml:space="preserve">
+    <value>UPDATE TBL_REJECTITEMSTATUS
+  SET REJ_STATUS= 'W',REJ_ACTIONEDBY = '', REJ_ACTIONEDTIME = NULL
+  WHERE REJ_BUSDATE = @CurBusDate and REJ_BATCHNUM = @BatchNum 
+  AND REJ_TRANSNUM = @TransNo  AND REJ_ACTIONEDBY = @OperID AND REJ_STATUS = 'I'
+  AND REJ_NEW_BUNDLEID = @BundleID</value>
+  </data>
+  <data name="sqlStmtUpdAcceptedTrans" xml:space="preserve">
+    <value>sp_UpdAcceptedRejTransForWeb</value>
+  </data>
+  <data name="sqlStmtUpdAcceptedTransRLOnly" xml:space="preserve">
+    <value>sp_UpdAcceptedRejTransForWebRLOnly</value>
+  </data>
+  <data name="sqlStmtUpdMultiLevelDecision" xml:space="preserve">
+    <value>sp_UpdateMultiLevelDecisionForWeb</value>
+  </data>
+  <data name="sqlStmtUpdRejectRLItems" xml:space="preserve">
+    <value>UPDATE TBL_ITEM SET ITM_ReferToWeb = 0 WHERE ITM_BusDate = @Busdate 
+			AND ITM_BatchDirectory = @BatchDir 
+			AND ITM_BatchNum = @BatchNo AND ITM_TransNum = @TransNo</value>
+  </data>
+  <data name="sqlStmtUpdRLAmendedItem" xml:space="preserve">
+    <value>UPDATE TBL_ITEM SET ITM_FLD12 = @UpdAcctNo, ITM_OriDepositor = ITM_Fld12,
+ITM_OriChqBSB = CASE WHEN (ITM_ItemType = 'C') THEN ITM_FLD4 ELSE ITM_OriChqBSB  END, ITM_FLD4 = @UpdBSB, ITM_TransSeqNum = @TranSeqNo, 
+ITM_FLD7 = CASE WHEN (ITM_ItemType = 'C' and (LTRIM(RTRIM(ITM_FLD4)) &lt;&gt; LTRIM(RTRIM(@UpdBSB)))) THEN '5' ELSE ITM_FLD7 END,
+ITM_Amount = @UpdAmount
+			WHERE ITM_BusDate = @BusDate
+			AND ITM_BatchDirectory = @BatchDir
+			AND ITM_BatchNum = @BatchNum
+			AND ITM_TransNum = @TransID
+			AND ITM_DIN = @DinNo</value>
+  </data>
+  <data name="sqlStmtUpdTransactionStatus" xml:space="preserve">
+    <value>UPDATE TBL_REJECTITEMSTATUS 
+SET REJ_STATUS = @status, REJ_ACTIONEDBY =  @OperID , REJ_ACTIONEDTIME = GETDATE() 
+where REJ_Busdate = @CurBusDate 
+ and REJ_BATCHNUM = @BatchNum 
+and REJ_TRANSNUM = @TransNo 
+AND REJ_NEW_BUNDLEID = @BundleID 
+AND (REJ_ACTIONEDBY = @OperID OR ((REJ_STATUS = 'W') 
+AND (@status = 'I')))</value>
+  </data>
+  <data name="stmtGetPrintArchivalReportInfo" xml:space="preserve">
+    <value>SELECT A.RPT_ReportCode,A.RPT_ReportDesc, A.RPT_ReportName, A.RPT_ReportSrc, @@SERVERNAME AS RPT_WebServerName, 'UVRPSWeb' AS RPT_WebDBName, 
+A.RPT_ReportType FROM TBL_REPORT A WITH (NOLOCK) WHERE A.RPT_ReportCode = @ReportCode and A.RPT_ClientCode =@ClientCode</value>
+  </data>
+  <data name="strLogTransactionDetails" xml:space="preserve">
+    <value>Business Date = {0}; BatchNo = {1}; BatchDir = {2}; Trans No = {3}</value>
+  </data>
+</root>

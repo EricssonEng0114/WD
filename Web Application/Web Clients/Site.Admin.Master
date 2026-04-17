@@ -1,0 +1,300 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Admin.Master.cs" Inherits="UBPCWeb.Site_Mobile" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title><%: Page.Title %></title>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+     <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/adminCss") %>      
+        <%: Scripts.Render("~/bundles/adminJs") %>
+        <%: Scripts.Render("~/DataTables/js") %>
+        <%: Scripts.Render("~/DataTables/adminjs") %>
+        <%: Scripts.Render("~/DataTables/js") %>
+    </asp:PlaceHolder>
+
+    <script>
+
+        $.ajaxSetup({ cache: false });
+        var isLoadSpinner = true;
+
+        var userId = '<%: Session["s_UserID"] %>';
+        var clientName = '<%: Session["s_UserClients"] %>';
+        //keep the session timeout value in the global variable
+        var OriSessionTimeout = "<%: Session.Timeout %>"; 
+        var OriSessionTimeout1 = "<%= FormsAuthentication.Timeout.TotalMinutes %>";
+        var popUpMsg = '<%: Session["s_GeneralMsg"]  %>';
+
+        var selectedBusdate = '<%: Session["CurActionSelectedBusdate"] %>';
+
+        //Added by boonchong PE - WD-24-003
+        var selectedBusdateFrom = '<%: Session["CurActionSelectedBusdateFrom"] %>';
+        var selectedBusdateTo = '<%: Session["CurActionSelectedBusdateTo"] %>';
+
+        $(document).ready(function () {
+            if (popUpMsg != "") {
+                alert(popUpMsg);
+            }
+
+          
+
+           
+        });      
+    </script>
+
+    <script>
+        function pad(n, width, z) {
+            z = z || '0';
+            n = n + '';
+            return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+        }
+</script>
+
+    <noscript>
+        Please enable "Active Scripting"/"Java Script" for this site to function properly. 
+        Please refresh or login again after Active Script is enabled.
+    </noscript>
+</head>
+<body>
+     <!-- ** BEGIN POP-UP MESSAGE AREA ** -->
+    <div class="submit-progress hidden" style="z-index:1000;">
+        <label><i class="fa fa-spinner fa-spin fa-2x"></i>&nbsp; Please wait while processing...</label>
+    </div>
+    <div id="dialog-batchMaint" title="Reset Batch maintenance" style="display: none;">
+            <p>
+                Transaction is In-Use, Are you sure to proceed?
+            </p>
+     </div>
+
+      <div id="dialog-confirmbox" title="Confirmation" style="display: none;">           
+     </div>
+
+    <div id="dialog-alertbox" title="Alert" style="display: none;">           
+     </div>
+
+    <div id="dialog-session-expired" title="Session Expired" style="display: none;">
+            <p>
+                Your session has expired. You will be redirected to the login page.
+            </p>
+     </div>
+  <!-- ** END POP-UP MESSAGE AREA ** -->
+
+    <span class='timeoutui-bar ui-overlay-c ui-corner-all'/>   
+       
+        <!-- HEADER -->
+        <div class="header navbar navbar-inverse ">
+            <!-- BEGIN TOP NAVIGATION BAR -->
+            <div class="navbar-inner">
+                <div class="header-seperation">
+                    <ul class="nav pull-left notifcation-center visible-xs visible-sm">
+                        <li class="dropdown">
+                            <a href="#main-menu" data-webarch="toggle-left-side">
+                                <div class="iconset top-menu-toggle-white"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/Home/Dashboard">
+                        <img src="/images/logo-jobmonster.png" class="logo" alt="" data-src="/images/logo-jobmonster.png" data-src-retina="/images/logo-jobmonster.png" width="100" height="35" />
+                    </a>
+                </div>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div class="header-quick-nav">
+                    <div class="pull-left">
+                        <!--Add unisys img Logo-->
+                        <a href="/Home/Dashboard">
+                            <img src="/images/logo-jobmonster.png" class="logo" alt="" data-src="/images/logo-jobmonster.png" data-src-retina="/images/logo-jobmonster.png" width="100" height="35" />
+                        </a>
+                    </div>
+                    <!-- BEGIN RIGHT Menu TOGGLER -->
+                    <div class="pull-right">
+                        <div class="chat-toggler">
+                            <div class="user-details">
+                                <div class="username">
+                                    <b>Welcome, <%: Session["s_UserID"] == null ? string.Empty : Session["s_UserID"].ToString() %></b>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav quick-section ">
+                            <li class="quicklinks">
+                                <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
+                                    <div class="iconset top-settings-dark "></div>
+                                </a>
+                                <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
+                                    <li>
+                                        <a href="/Profile"><i class="fa fa-user"></i>&nbsp;&nbsp;View Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="javascript:onLogOut('/','0');"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END TOP NAVIGATION BAR -->
+        </div>
+        <!-- END HEADER -->
+
+        <div class="page-container row">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar " id="main-menu">
+                <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+                    
+                <!-- BEGIN SIDEBAR MENU Based on access level given -->
+                        <ul id="ulmenu">
+                                <li class="start">
+                                    <a class="menulink" href="/Home"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span></a>
+                                </li>
+                            <% if (MaintenanceListbyGroup.Count > 0){ %>
+                                <li>
+                                     <a class="menulink" title="Maintenance Tasks" href="javascript:;"> <i class="fa fa fa-wrench"></i> <span class="title">Maintenance Tasks</span> <span class="arrow"></span> </a>
+                                     <ul class="sub-menu" style="pointer-events:none" >
+                                         <% foreach(UBPCWeb.Modules.AccessMaintenance.AccessModel obj in MaintenanceListbyGroup){ %>
+                                          <li><a class="menulink" style="pointer-events:auto" href="<%: "/" + obj.ModuleLink %>"><%: obj.ModuleName %></a></li>
+                                         <% } %>
+                                     </ul>
+                                </li>
+                            <% } %>
+
+                              <% if (MonitoringListbyGroup.Count > 0)
+                                 { %>
+
+                                <li>
+                                     <a class="menulink" title="Monitoring Tasks" href="javascript:;"> <i class="fa fa fa-eye"></i> <span class="title">Monitoring Tasks</span> <span class="arrow"></span> </a>
+                                     <ul class="sub-menu" style="pointer-events:none" >
+                                         <% foreach (UBPCWeb.Modules.AccessMaintenance.AccessModel obj in MonitoringListbyGroup) { %>
+                                          <li><a class="menulink" style="pointer-events:auto" href="<%: "/" + obj.ModuleLink %>"><%: obj.ModuleName %></a></li>
+                                         <% } %>
+                                     </ul>
+                                </li>
+
+                              <% } %>
+                            <% if (OperatorListbyGroup.Count > 0)
+                                 { %>
+                                <li>
+                                     <a class="menulink" title="Operator Tasks" href="javascript:;"> <i class="fa fa fa-list-ul"></i> <span class="title">Operator Tasks</span> <span class="arrow"></span> </a>
+                                     <ul class="sub-menu" style="pointer-events:none">
+                                         <% foreach (UBPCWeb.Modules.AccessMaintenance.AccessModel obj in OperatorListbyGroup){ %>
+                                          <li><a class="menulink" style="pointer-events:auto" href="<%: "/" + obj.ModuleLink %>"><%: obj.ModuleName %></a></li>
+                                         <% } %>
+                                     </ul>
+                                </li>
+                             <% } %>
+
+                                <li>
+                                     <a class="menulink" title="Profile" href="javascript:;"> <i class="fa fa fa-user"></i> <span class="title">Profile Info</span> <span class="arrow"></span> </a>
+                                     <ul class="sub-menu">
+                                          <li><a class="menulink" href="/Profile">View Profile</a></li>
+                                          <li><a class="menulink" href="javascript:onLogOut('/','0');">Logout</a></li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        <div class="clearfix"></div>
+                <!-- END SIDEBAR MENU -->
+                    
+                </div>
+            </div>
+            <a href="#" class="scrollup">Scroll</a>
+            <div class="page-content">
+                <asp:ContentPlaceHolder runat="server" ID="MainAdminContent" />
+            </div>
+        </div>
+
+    <script>
+        function onLogOut(strUrl, expired) {
+            loadSpinner();
+            var userID = '<%: Session["s_UserID"] %>';
+            var clientName = '<%: Session["s_CurSelectedClientRejDec"] %>';
+            var siteN = '<%: Session["s_CurSelectedSiteRejDec"] %>';
+            
+            validNavigation = true;
+            var url = "/LogoutTimeout/" + userID + "/" + clientName + "/" + siteN + "/" + expired;
+
+            window.location.href = url;
+        }
+
+        function showMsg(title, msg) {
+            BootstrapDialog.show({
+                title: title,//'Message',
+                message: msg,
+                buttons: [{
+                    label: 'Close',
+                    action: function (dialog) {
+                        dialog.close();
+                    }
+                }]
+            });
+        }
+   
+    </script>
+    
+    <script type="text/javascript" language="javascript" class="init">
+        $(document).ready(function () {
+            unloadTimeout();
+
+            setInterval(function () { reset_validNavigation() }, 300000);
+
+
+            $(function () {
+                $(this).bind("contextmenu", function (e) {
+                    e.preventDefault();
+                });
+            });
+
+            $(document).keydown(function (event) {
+                var activeInput = $(document.activeElement).is("input[type=text]:not([readonly]):focus, textarea:focus,input[type=password]:not([readonly]):focus");
+
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;  //Prevent from ctrl+shift+i
+                }
+                else if (event.ctrlKey && event.keyCode == 85) {
+                    return false;  //Prevent from ctrl+u
+                }
+                else if (event.keyCode == 13) {
+                    return false;//Prevent from enter
+                }
+
+                else if (event.keyCode == 116) {
+                    return false;//Prevent f5
+                }
+                else if (event.keyCode === 8 && !activeInput) {
+                    return false;
+                }
+               
+            });
+
+            $(document.body).click(function (e) {
+              //  alert("click trigger");
+                //var $this = this;
+                //$('[data-webarch="toggle-left-side"]').on('touchstart click', function (e) {
+                //    e.preventDefault();
+                //    $this.toggleLeftSideBar();
+                //});
+                //$('[data-webarch="toggle-right-side"]').on('touchstart click', function (e) {
+                //    e.preventDefault();
+                //    $this.toggleRightSideBar();
+                //});
+            });
+
+        });
+
+    </script>
+  
+    <script>
+        function reset_validNavigation() {
+            //Reset to false
+            if (validNavigation) {
+                validNavigation = false;
+            }
+        }
+    </script>
+</body>
+</html>

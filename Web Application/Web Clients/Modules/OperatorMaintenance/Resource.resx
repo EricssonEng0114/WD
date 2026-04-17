@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="stmtDeleteUser" xml:space="preserve">
+    <value>DELETE FROM TBL_OPERATOR WHERE UST_UserID = @UserID</value>
+  </data>
+  <data name="stmtGetAllUser" xml:space="preserve">
+    <value>SELECT CAST((ABS(CHECKSUM(NEWID())) % 1000000 + 1) as varchar(100)) as TMPID, UST_UserID ,UST_UserName ,UST_UserGroup ,UST_PwdChgLastDate ,UST_PwdChgDaysValid ,UST_PwdPos ,UST_Pwd_0 ,UST_Pwd_1 ,UST_Pwd_2 ,UST_Pwd_3 ,UST_Pwd_4 ,UST_Pwd_5 ,UST_PwdChgRetryCnt ,UST_Comments ,UST_ForcePwdChg ,UST_NoSession ,UST_Clients ,UST_LastLogin ,UST_Locked FROM TBL_OPERATOR WITH (NOLOCK)</value>
+  </data>
+  <data name="stmtGetAllUserTiedToAdmin" xml:space="preserve">
+    <value>SELECT CAST((ABS(CHECKSUM(NEWID())) % 1000000 + 1) as varchar(100)) as TMPID,  UST_UserID ,UST_UserName ,UST_UserGroup ,UST_PwdChgLastDate ,UST_PwdChgDaysValid ,UST_PwdPos ,UST_Pwd_0 ,UST_Pwd_1 ,UST_Pwd_2 ,UST_Pwd_3 ,UST_Pwd_4 ,UST_Pwd_5 ,UST_PwdChgRetryCnt ,UST_Comments ,UST_ForcePwdChg ,UST_NoSession ,UST_Clients ,UST_LastLogin ,UST_Locked 
+FROM TBL_OPERATOR WITH (NOLOCK)
+WHERE UST_ForUnisys = 
+(
+SELECT UST_ForUnisys FROM TBL_OPERATOR (NOLOCK)
+WHERE UST_UserID = @userID
+)</value>
+  </data>
+  <data name="stmtGetClientInfoList" xml:space="preserve">
+    <value>SELECT CLT_ClientCode ,CLT_ClientModule ,CLT_ClientName ,CLT_ClientAlias ,CLT_ClientDBName ,CLT_ClientDBServerName FROM TBL_CLIENTINFO(nolock)</value>
+  </data>
+  <data name="stmtGetClientInfoListExcUnisys" xml:space="preserve">
+    <value>SELECT CLT_ClientCode ,CLT_ClientModule ,CLT_ClientName ,CLT_ClientAlias ,CLT_ClientDBName ,CLT_ClientDBServerName FROM TBL_CLIENTINFO(nolock)
+WHERE CLT_ClientCode &lt;&gt; 'Unisys'</value>
+  </data>
+  <data name="stmtInsertUser" xml:space="preserve">
+    <value>INSERT INTO TBL_OPERATOR 
+(UST_UserID,UST_UserName,UST_UserGroup,UST_PwdChgDaysValid,UST_PwdPos,UST_Pwd_0, UST_Comments,
+ UST_ForcePwdChg, UST_Clients,UST_NoSession,UST_Locked,UST_ForUnisys)
+  VALUES (@UserID, @UserName, @UserGroup, 30, 0, @Password, @Comments,
+   1, @Clients,0,0,@ForUnisys)</value>
+  </data>
+  <data name="stmtIsUsrLogin" xml:space="preserve">
+    <value>Select UST_NoSession from TBL_OPERATOR with(nolock) where UST_UserID = @userID</value>
+  </data>
+  <data name="stmtUpdateOperPassword" xml:space="preserve">
+    <value>UPDATE TBL_OPERATOR SET
+ UST_Pwd_{0} = @Password, 
+ UST_PwdPos = @PassPos, 
+ UST_PwdChgLastDate = GETDATE(), 
+UST_ForcePwdChg = 1 WHERE UST_UserID = @UserID</value>
+  </data>
+  <data name="stmtUpdateUser" xml:space="preserve">
+    <value>IF((SELECT UST_Locked FROM TBL_OPERATOR WITH(NOLOCK) WHERE UST_UserID = @UserID) = 1 AND @IsLocked = 0)
+BEGIN
+UPDATE TBL_OPERATOR
+    SET UST_LastLogin = GETDATE()
+    WHERE UST_UserID = @UserID AND ISNULL(UST_LastLogin,'1900-01-01') &lt;&gt; '1900-01-01'
+END
+
+UPDATE TBL_OPERATOR SET UST_UserName = @UserName,UST_UserGroup = @UserGroup  ,UST_Comments = @Comment
+   ,UST_Clients =@Clients ,UST_ForUnisys = @ForUnisys, UST_Locked = @IsLocked, UST_NoSession = @IsSession,
+   UST_ForcePwdChg = @ForcedPwdChanged, UST_PwdChgRetryCnt = 0 
+ WHERE UST_UserID = @UserID
+</value>
+  </data>
+  <data name="stmtUsrExisted" xml:space="preserve">
+    <value>SELECT COUNT(1) FROM TBL_OPERATOR (NOLOCK) WHERE UST_UserID = @UserID</value>
+  </data>
+</root>

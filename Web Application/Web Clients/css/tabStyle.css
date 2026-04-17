@@ -1,0 +1,204 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+}
+
+td {
+    padding: 5px;
+}
+
+/* Style the Cheque tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #2980B9;
+    background-color: #D4E6F1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #D4E6F1;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+div.tabCH {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #2980B9;
+}
+
+/* Style the buttons inside the tab */
+div.tabCH button {
+    background-color: #2980B9;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #7FB3D5;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #5499C7;
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #2980B9;
+    border-top: none;
+}
+
+
+/* Style the Stub tab */
+div.tabS {
+    overflow: hidden;
+    border: 1px solid #2980B9;
+    background-color: #D4E6F1;
+}
+
+div.tabSH {
+    overflow: hidden;
+    border: 1px solid #2980B9;
+    background-color: #2980B9;
+}
+
+/* Style the buttons inside the tab */
+div.tabSH button {
+    background-color: #2980B9;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #fff;
+}
+
+
+/* Style the buttons inside the tab */
+div.tabS button {
+    background-color: #D4E6F1; /*inherit; */
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tabS button:hover {
+    background-color: #7FB3D5;
+}
+
+/* Create an active/current tablink class */
+div.tabS button.active {
+    background-color: #5499C7;
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabcontentS {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #2980B9;
+    border-top: none;
+}
+
+/* Style the tab content */
+.tabcontentA {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #2980B9;
+        border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: white;
+}
+
+    div.tabA {
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Create an active/current tablink class */
+div.tabA button.active {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+    /* Style the buttons inside the tab */
+div.tabA button {
+    background-color: #D4E6F1;
+    float: left;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+.message_box {
+    margin:1px 0;
+}
+
+.alert {
+    color:#666;
+    font-family:"Open Sans";
+    font-size:16px;
+    border:1px solid #FDEBA5;
+    background:url(../../images/warning.png) no-repeat scroll 10px center #FEF4C8;
+    padding: 1em 1.5em 1em 3em;
+}
+
+.info {
+    color:#666;
+    font-family:"Open Sans";
+    font-size:16px;
+    border:1px solid #BEE5F8;
+    background:url(../../images/info.png) no-repeat scroll 10px center #D7EFFB;
+    padding: 1em 1.5em 1em 3em;
+}
+
+.success {
+    color:#666;
+    font-family:"Open Sans";
+    font-size:16px;
+    border:1px solid #DEF1BF;
+    background:url(../../images/success.png) no-repeat scroll 10px center #E8F6D2;
+    padding: 1em 1.5em 1em 3em;
+}
+
+.error {
+    color:#666;
+    font-family:"Open Sans";
+    font-size:16px;
+    border:1px solid #FFDBDB;
+    background:url(../../images/error.png) no-repeat scroll 10px center #FFE7E7;
+padding: 1em 1.5em 1em 3em;
+}
+
+
+  
+  

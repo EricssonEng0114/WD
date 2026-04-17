@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UBPCWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title><%: Page.Title %></title>  
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/loginCss") %>
+        <%: Scripts.Render("~/bundles/LoginJs") %>
+    </asp:PlaceHolder>
+    <script>
+          window.jQuery = window.$ = jQuery;
+    </script>   
+
+<%--     <script>
+            window.open("Default.aspx", "secondWindow", "fullscreen,scrollbars='yes',statusbar='yes',location='no'").focus();
+            window.open = 'secondWindow';
+
+            window.self.close();
+    </script>--%>
+
+
+</head>
+<body oncontextmenu="return false">
+    <div class="site">
+        <header class="noo-header" id="noo-header">
+            <div class="navbar-wrapper">
+                <div class="navbar navbar-default fixed-top shrinkable">
+                    <div class="container-boxed max">
+                        <div class="navbar-header">
+                            <h1 class="sr-only"></h1>
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                                <span class="sr-only">Navigation</span>
+                            </a>
+                            <a class="navbar-toggle member-navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-user-navbar-collapse">
+                            </a>
+                            <a href="/" class="navbar-brand">
+                                <img class="noo-logo-img noo-logo-normal" src="/images/logo-jobmonster.png" alt="">
+                                <img class="noo-logo-mobile-img noo-logo-normal" src="/images/logo-mobile.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="collapse navbar-collapse noo-navbar-collapse">
+                            <ul class="navbar-nav sf-menu"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-wrap">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <footer style="text-align:center" class="colophon site-info">
+            <div class="container-full">
+                <div class="footer-more">
+                    <div class="container-boxed">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="noo-bottom-bar-content">
+                                    Version 1.1.0  &copy; 2019 Unisys. All Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
+
+    <script>
+        function showMsg(msg) {
+            BootstrapDialog.show({
+                title: 'Message',
+                message: msg,
+                buttons: [{
+                    label: 'Close',
+                    action: function (dialog) {
+                        dialog.close();
+                    }
+                }]
+            });
+        }
+
+    </script>
+
+    <script type="text/javascript" class="init">
+        $(document).ready(function () {
+            $(function () {
+                $(this).bind("contextmenu", function (e) {
+                    e.preventDefault();
+                });
+            });
+
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;  //Prevent from ctrl+shift+i
+                }
+                else if (event.ctrlKey && event.keyCode == 85) {
+                    return false;  //Prevent from ctrl+u
+                }
+                
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

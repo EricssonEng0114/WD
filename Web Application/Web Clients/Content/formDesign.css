@@ -1,0 +1,198 @@
+﻿.form {
+    background: #f1f1f1;
+    padding-left: 20px;
+    width: 1000px;
+    -moz-border-radius: 15px;
+    border-radius: 10px;
+    /*border-radius: 5px 20px 5px;*/
+    behavior: url(pie2/PIE.htc);
+}
+
+td {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/*Buttton only*/
+.button {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #ddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+    background-image: -moz-linear-gradient(top, #eee, #ccc);
+    background-image: -ms-linear-gradient(top, #eee, #ccc);
+    background-image: -o-linear-gradient(top, #eee, #ccc);
+    background-image: linear-gradient(top, #eee, #ccc);
+    border: 1px solid #777;
+    padding: 0 1.5em;
+    margin: 0.5em;
+    font: bold 1em/2em Arial, Helvetica;
+    text-decoration: none;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    -moz-border-radius: .2em;
+    -webkit-border-radius: .2em;
+    border-radius: .2em;
+    -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}
+
+    .button:hover {
+        background-color: #eee;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+        background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+        background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+        background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+        background-image: -o-linear-gradient(top, #fafafa, #ddd);
+        background-image: linear-gradient(top, #fafafa, #ddd);
+    }
+
+    .button:active {
+        -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        position: relative;
+        top: 1px;
+    }
+
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+
+    .button:before {
+        background: #ccc;
+        background: rgba(0,0,0,.1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .01em;
+        -moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        -webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        -moz-border-radius: .15em 0 0 .15em;
+        -webkit-border-radius: .15em 0 0 .15em;
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+
+/* Buttons and inputs */
+
+button.button, input.button {
+    cursor: pointer;
+    overflow: visible; /* removes extra side spacing in IE */
+}
+
+/* removes extra inner spacing in Firefox */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* If line-height can't be modified, then fix Firefox spacing with padding */
+input::-moz-focus-inner {
+    padding: .4em;
+}
+
+/* The disabled styles */
+.button[disabled], .button[disabled]:hover, .button.disabled, .button.disabled:hover {
+    background: #eee;
+    color: #aaa;
+    border-color: #aaa;
+    cursor: default;
+    text-shadow: none;
+    position: static;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Hexadecimal entities for the icons */
+.add:before {
+    content: "\271A";
+}
+
+.edit:before {
+    content: "\270E";
+}
+
+.delete:before {
+    content: "\2718";
+}
+
+.save:before {
+    content: "\2714";
+}
+
+.email:before {
+    content: "\2709";
+}
+
+.submission:before {
+    content: "\2726";
+}
+
+.textbox {
+    width: 500px;
+    height: 28px;
+    border-radius: 5px;
+    background-image: url('../images/form_bg.jpg');
+    position: relative;
+    padding: 4px 8px 4px 4px !important;
+    line-height: 1;
+    border: 1px solid #A4A4A4;
+    behavior: url(/Content/pie/PIE.htc);
+}
+
+.text {
+    width: 500px;
+    height: 28px;
+    border-radius: 0px;
+    position: relative;
+    padding: 4px 8px 4px 4px !important;
+    line-height: 1;
+    border: none;
+    behavior: url(/Content/pie/PIE.htc);
+    background-color: #fff;
+    background: transparent;
+}
+
+.textarea {
+    font-family: Calibri; /*Arial, Helvetica, sans-serif;*/
+    font-size: 15px;
+    background-image: url('../images/form_bg_area.jpg');
+    color: #333;
+    border: 1px solid #A4A4A4;
+    padding: 4px 8px 4px 4px !important;
+    height: 100px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.datepicker {
+    font-family: Calibri; /*Arial, Helvetica, sans-serif;*/
+    font-size: 15px;
+    color: #333;
+    border: 1px solid #A4A4A4;
+    padding: 4px 8px 4px 4px !important;
+    background: #FFFFFF url('../images/calendar20.png') no-repeat 220px 4px;
+    line-height: 1;
+    width: 250px;
+    height: 28px;
+    /*border-radius: 5px;*/
+    padding-right: 25px;
+    padding-left: 4px;
+}
+
+.field-validation-error {
+    color: #ff0000;
+}
+

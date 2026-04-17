@@ -1,0 +1,17 @@
+﻿/********************************************************************/
+/* PDSA Collapser 
+  The following styles are for the PDSA collapser which adds
+   a glyph icon to the right side of the bootstrap panel collapser.
+*/
+/********************************************************************/
+.panel > .panel-heading > .panel-title > a {
+  text-decoration: none;
+}
+
+.pdsa-panel-toggle {
+  float: right;
+  cursor: pointer;
+}
+/********************************************************************/
+/* END: PDSA Collapser */
+/********************************************************************/

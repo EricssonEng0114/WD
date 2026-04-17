@@ -1,0 +1,7 @@
+#tblDialog{width:100%;}
+#tblDialog thead tr{background:grey; color:White;}
+#tblDialog tr td, #tblDialog tr th{text-align:left;
+						 			   margin: 10px}
+#tblDialog tbody input{width:100%;}
+#tblDialog img{cursor: pointer;}
+

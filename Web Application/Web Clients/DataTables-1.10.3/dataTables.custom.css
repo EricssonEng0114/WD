@@ -1,0 +1,48 @@
+﻿tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+td.details-control {
+    background: url('../images/plus.png') no-repeat center 10px;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('../images/minus.png') no-repeat center 10px;
+}
+
+td.details-content {
+    vertical-align: top;
+    white-space:pre-wrap;
+    font-weight: 100;
+    font-size: small;
+}
+
+td.details-id {
+    vertical-align: top;
+    white-space:pre-wrap;
+    font-weight: 100;
+    font-size: small;
+}
+
+.btn-main {
+    font-size: 20px;
+}
+
+.btn-align-bottom {
+    vertical-align: bottom;
+}
+
+
+input { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+
+h2 {
+    color: white;
+
+}
+
+a:hover {
+  cursor:pointer;
+ }

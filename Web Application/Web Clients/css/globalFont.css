@@ -1,0 +1,121 @@
+﻿/*Override CSS global file*/
+
+/*Change all the fonts to Arial*/
+/*IMPORTANT NOTES!! 
+  Whenever using icon or font awesome ( those are consider as fonts) 
+  please include the class 'fa' or 'icon' so that these changes will not be applied*/
+
+html *:not(.fa):not([class*="icon"])
+{
+   font-family: Arial !important;
+}
+
+[class*="icon-custom-right"]{
+
+     color: #000000 !important;
+}
+thead tr th{
+    font-family: Arial !important;
+}
+
+input[type="text"]:not(.whiteFont),
+textarea,
+#dataTable_length label,
+tbody tr td,
+.form-label,
+.semi-bold
+{
+    color: #000000 !important;
+    font-family: Arial !important;
+}
+
+.whiteFont{
+     color: #FFFFFF !important;
+     font-weight:bold;
+}
+
+.table.table thead .sorting_desc
+{
+    background: url("../images/sort_desc_icon.png") no-repeat center right !important; 
+}
+
+.table.table thead .sorting_asc
+{
+    background: url("../images/sort_asc_icon.png") no-repeat center right !important; 
+}
+
+.dataTables_filter 
+{ 
+    visibility: hidden;
+}
+
+.ui-state-default:not(.ui-state-disabled):not(.sorting_disabled)
+{
+    cursor:pointer;
+}  
+
+/** spinner css**/
+.timeoutui-bar{
+    display:block;
+    /*position:absolute;*/
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;    
+}
+
+
+.submit-progress-bg {
+    background-color: lightgray !important;
+    opacity: 0.5;
+  }
+
+  .submit-progress {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 6em;
+    padding-top: 2.3em;
+    z-index: 9999;/*1;*/
+    /* The following properties are the ones most likely to change */
+    width: 20em;
+    /* Set 'margin-left' to a negative number that is 1/2 of 'width' */
+    margin-left: -10em;
+    padding-left: 2.1em;
+    background-color: black;
+    color: white;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.4em;
+    box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+    -moz-box-shadow: 0.4em 0.4em rgba(0,0,0,0.6);
+  }
+   
+
+#viewAttachment .modal-dialog
+{
+    
+    width: 80%;
+    height: 90%;
+    margin-top:10px;
+}
+
+#viewAttachment .modal-body
+{
+    padding: 0px;
+}
+
+
+.multiselect
+{
+    color: #000;
+    background-color: #ffffff !important;
+    margin-top: 3px;
+    right: 0;
+    left: auto;
+    font-family:Arial!important;
+    border: 1px solid #8b91a0;
+    font-size: 13px;
+    /*text-align: left !important;*/
+}

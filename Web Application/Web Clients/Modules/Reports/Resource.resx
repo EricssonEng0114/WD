@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="stmtGetAccessAllBranch" xml:space="preserve">
+    <value>select ACC_Group{0} from TBL_ACCESSLEVEL nolock where ACC_FunctionCode = 'ViewAllBranch'</value>
+  </data>
+  <data name="stmtGetAllReport" xml:space="preserve">
+    <value>SELECT RPT_ReportCode, RPT_ReportDesc, RPT_ReportName, RPT_ReportSrc, RPT_ShowInMenu, RPT_AppCode,RPT_ClientCode FROM TBL_REPORT with (nolock) WHERE RPT_ShowInMenu = 1</value>
+  </data>
+  <data name="stmtGetAllReportByClient" xml:space="preserve">
+    <value>SELECT RPT_ReportCode, RPT_ReportDesc, RPT_ReportName, RPT_ReportSrc, RPT_ShowInMenu, RPT_AppCode,RPT_ClientCode FROM TBL_REPORT with (nolock) WHERE RPT_ClientCode = @ClientCode and RPT_ShowInMenu = 1</value>
+  </data>
+  <data name="stmtGetAllReportWithCode" xml:space="preserve">
+    <value>SELECT RPT_ReportCode, RPT_ReportDesc, RPT_ReportName, RPT_ReportSrc, RPT_ShowInMenu, RPT_AppCode,RPT_ClientCode FROM TBL_REPORT with (nolock) WHERE RPT_ReportCode = @ReportCode and RPT_ShowInMenu = 1</value>
+  </data>
+  <data name="stmtGetClientConnectionString" xml:space="preserve">
+    <value>SELECT 'Data Source='+ LTRIM(RTRIM(CLT_ClientDBServerName)) + ';Initial Catalog='+ LTRIM(RTRIM(CLT_ClientDBName)) +';Integrated Security=True' as ConnString  FROM TBL_CLIENTINFO WITH(NOLOCK) where CLT_ClientCode =  @ClientCode</value>
+  </data>
+  <data name="stmtGetCRReportInfo" xml:space="preserve">
+    <value>SELECT A.RPT_ReportCode,A.RPT_ReportDesc, A.RPT_ReportName, A.RPT_ReportSrc, A.RPT_ClientCode,isnull(B.CLT_ClientDBName,'') AS RPT_DBName, isnull(B.CLT_ClientDBServerName,'') AS RPT_ServerName, @@SERVERNAME AS RPT_WebServerName, 'UVRPSWeb' AS RPT_WebDBName, A.RPT_ReportType FROM TBL_REPORT A WITH (NOLOCK) LEFT JOIN TBL_CLIENTINFO B WITH (NOLOCK) ON (A.RPT_ClientCode = B.CLT_ClientCode) WHERE A.RPT_ReportCode = @ReportCode and A.RPT_ClientCode = @ClientCode</value>
+  </data>
+  <data name="stmtGetCurrencyCode" xml:space="preserve">
+    <value>SELECT * FROM TBL_CURRENCYDEF WITH (NOLOCK)</value>
+  </data>
+  <data name="stmtGetENCUnreadable" xml:space="preserve">
+    <value>SELECT	*
+FROM	TBL_ITEM (NOLOCK)
+INNER	JOIN TBL_BSTATUS (NOLOCK)
+ON		ITM_BusDate = BST_BusDate
+AND		ITM_WsID = BST_WsId
+AND		ITM_BatchDirectory = BST_BatchDirectory
+AND		ITM_BatchNum = BST_BatchNum
+WHERE	ITM_ONUS = 1
+AND		ITM_ItemType = 'S'
+AND		(ISNUMERIC(ITM_Fld2) &lt;&gt; 1 OR ISNUMERIC(ITM_Fld4) &lt;&gt; 1 OR ISNUMERIC(ITM_Fld5) &lt;&gt; 1 OR ISNUMERIC(ITM_Fld3) &lt;&gt; 1)
+AND		BST_BusDate = @Busdate</value>
+  </data>
+  <data name="stmtGetRequiredImgPrintRptList" xml:space="preserve">
+    <value>SELECT PAR_ParamName, PAR_Value1,PAR_Value2,PAR_Comment FROM TBL_PARAM WITH (NOLOCK) WHERE PAR_ParamName IN ('ICPSReportIncludeImg','IRPSReportIncludeImg')</value>
+  </data>
+  <data name="RlpsIFS" xml:space="preserve">
+    <value>RLPS_IFSPath</value>
+  </data>
+  <data name="stmtGetClientInfoList" xml:space="preserve">
+    <value>SELECT CLT_ClientCode ,CLT_ClientModule ,CLT_ClientName ,CLT_ClientAlias ,CLT_ClientDBName ,CLT_ClientDBServerName FROM TBL_CLIENTINFO(nolock)</value>
+  </data>
+  <data name="stmtGetClientInfoListExcUnisys" xml:space="preserve">
+    <value>SELECT CLT_ClientCode ,CLT_ClientModule ,CLT_ClientName ,CLT_ClientAlias ,CLT_ClientDBName ,CLT_ClientDBServerName FROM TBL_CLIENTINFO(nolock)
+WHERE CLT_ClientCode &lt;&gt; 'Unisys'</value>
+  </data>
+</root>
