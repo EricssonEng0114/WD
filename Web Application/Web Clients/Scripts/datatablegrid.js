@@ -1061,7 +1061,8 @@ function initOutlookRecpMaintDataTable(client, emailAddr, site) {
                 "class": "details-content",
                 "data": "Site",
                 "orderable": true,
-                "width": "10%"
+                "width": "10%",
+                "visible": client === 'USYS'
 
             },
             {

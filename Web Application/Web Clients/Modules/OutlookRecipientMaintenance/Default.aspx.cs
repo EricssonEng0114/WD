@@ -197,6 +197,7 @@ namespace UBPCWeb.Modules.OutlookRecipientMaintenance
         {
             txtEmailAddr.Text = "";
             ddlClient.SelectedIndex = 0;
+            ddlSite.SelectedIndex = 0;
 
             //Initialise Grid
             //client, email address
